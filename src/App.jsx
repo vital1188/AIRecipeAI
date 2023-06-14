@@ -76,7 +76,7 @@ function App() {
               <button
                 className="BTNGit"
                 onClick={() => {
-                  window.open("https://twitter.com/Feedbacks_dev", "_blank");
+                  window.open("https://github.com/josue674/RandomRecipe.git", "_blank");
                 }}
               >
                 <BsGithub />

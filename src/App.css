@@ -195,3 +195,13 @@
   box-shadow: 0 0 5px #0000004d;
   /* border-radius: 0px 0px 20px 0px; */
 }
+
+@media (max-width: 700px) {
+  .App{
+    flex-direction: column;
+    height: fit-content;
+  }
+  .TextRecipe{
+    height: 500px;
+  }
+}
