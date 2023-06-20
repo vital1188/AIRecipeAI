@@ -1,9 +1,12 @@
 :root {
-  background-color: #e9e9e9;
-  padding: 0px 10px 0px 10px;
+  --body_background: #ffffff;
+  --body_color: #000000;
+  --body_shadow: #000000;
 }
 
 body {
+  background-color: var(--body_background);
+  padding: 0px 10px 0px 10px;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -12,9 +15,28 @@ body {
   min-height: 100vh;
 }
 
+[data-theme="dark"] {
+  --body_background: #000000;
+  --body_color: #ffffff;
+  --body_shadow: #ffffff;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(var(--body_color) 1px, transparent 1px);
+  background-size: 35px 35px;
+}
+
+
 @media (max-width: 700px) {
-  :root{
+  :root {
     padding: 20px;
   }
 }
-

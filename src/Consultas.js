@@ -1,7 +1,7 @@
 export async function Recipe(req, apiKey) {
 //   console.log(req);
     // console.log(apiKey);
-  const prompt = `Write a recipe based on these ingredients and instructions:${req.instructions} Ingredients:${req.ingredients}`;
+  const prompt = `Write a recipe based on these ingredients and instructions:${req.instructions} Ingredients:${req.ingredients}Instructions:`;
   // console.log(JSON.stringify({prompt}));
   const response = await fetch("https://api.openai.com/v1/completions", {
     method: "POST",
@@ -16,8 +16,8 @@ export async function Recipe(req, apiKey) {
       n: 1,
       stop: "\\n",
       model: "text-davinci-003",
-      frequency_penalty: 0.5,
-      presence_penalty: 0.5,
+      frequency_penalty: 0,
+      presence_penalty: 0,
       logprobs: 10,
     }),
   });

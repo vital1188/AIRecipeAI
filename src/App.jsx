@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import { Recipe } from "./Consultas";
 import { BsGithub, BsTwitter } from "react-icons/bs";
+import { TbLoader } from "react-icons/tb";
+import DarkMode from "./DarkMode/DarkMode";
 
 function App() {
   const [data, setData] = useState({
@@ -31,6 +33,7 @@ function App() {
     <>
       <div className="App">
         <div className="DivContentInformation">
+          <DarkMode />
           <div className="DivContentInstru">
             <label className="Textos">Instructions :</label>
             <textarea
@@ -63,23 +66,26 @@ function App() {
               consulta(e);
             }}
           >
-            {loading ? "Loading..." : "Generate"}
+            {loading ? <TbLoader className="Load" /> : "Generate"}
           </button>
           <div className="DivContentCon">
-            <div className="DivContentDescri">
-              <label className="LabelTitle">Random Recipe</label>
+            {/* <div className="DivContentDescri"> */}
+            {/* <label className="LabelTitle">Recipe AI</label>
               <label className="LabelDescrip">
                 It is an open source random recipe generator that uses AI
-              </label>
-            </div>
+              </label> */}
+            {/* </div> */}
             <div className="DivContentBut">
               <button
                 className="BTNGit"
                 onClick={() => {
-                  window.open("https://github.com/josue674/RandomRecipe.git", "_blank");
+                  window.open(
+                    "https://github.com/josue674/RandomRecipe.git",
+                    "_blank"
+                  );
                 }}
               >
-                <BsGithub />
+                <BsGithub className="Github" />
               </button>
               <button
                 className="BTNTwi"
@@ -87,7 +93,7 @@ function App() {
                   window.open("https://twitter.com/Feedbacks_dev", "_blank");
                 }}
               >
-                <BsTwitter />
+                <BsTwitter className="Twitter" />
               </button>
             </div>
           </div>
