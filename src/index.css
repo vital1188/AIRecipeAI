@@ -31,7 +31,7 @@ body::after {
   right: 0;
   bottom: 0;
   background-image: radial-gradient(var(--body_color) 1px, transparent 1px);
-  background-size: 35px 35px;
+  background-size: 30px 30px;
 }
 
 

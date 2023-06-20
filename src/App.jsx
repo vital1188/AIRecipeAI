@@ -1,8 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Recipe } from "./Consultas";
-import { BsGithub, BsTwitter } from "react-icons/bs";
-import { TbLoader } from "react-icons/tb";
+import { BsGithub, BsTwitter,TbLoader } from "./Icons";
 import DarkMode from "./DarkMode/DarkMode";
 
 function App() {
