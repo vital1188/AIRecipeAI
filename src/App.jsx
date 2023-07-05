@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Recipe } from "./Consultas";
-import { BsGithub, BsTwitter,TbLoader } from "./Icons";
+import { TbLoader } from "./Icons";
 import DarkMode from "./DarkMode/DarkMode";
 
 function App() {
@@ -74,27 +74,6 @@ function App() {
                 It is an open source random recipe generator that uses AI
               </label> */}
             {/* </div> */}
-            <div className="DivContentBut">
-              <button
-                className="BTNGit"
-                onClick={() => {
-                  window.open(
-                    "https://github.com/josue674/RandomRecipe.git",
-                    "_blank"
-                  );
-                }}
-              >
-                <BsGithub className="Github" />
-              </button>
-              <button
-                className="BTNTwi"
-                onClick={() => {
-                  window.open("https://twitter.com/Feedbacks_dev", "_blank");
-                }}
-              >
-                <BsTwitter className="Twitter" />
-              </button>
-            </div>
           </div>
         </div>
         <div className="DivContentRecipe">
